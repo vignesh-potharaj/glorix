@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Code, LineChart, Cpu, Bot, CheckCircle2 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const stats = [
   { value: "20+", label: "Projects Delivered" },
@@ -281,7 +280,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {testimonials.map((test, i) => (
               <div key={i} className="glass-card p-8 md:p-10 text-left relative">
-                <div className="text-6xl text-electric-blue/20 absolute top-4 left-6 font-display">"</div>
+                <div className="text-6xl text-electric-blue/20 absolute top-4 left-6 font-display">&quot;</div>
                 <p className="text-lg md:text-xl text-gray-200 mb-8 relative z-10 leading-relaxed">
                   {test.quote}
                 </p>

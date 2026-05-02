@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
-export default function CaseStudyPage({ params }: { params: { slug: string } }) {
+export default function CaseStudyPage() {
   // Mock data for the case study template
   // In a real app, you'd fetch this based on params.slug
   const project = {
