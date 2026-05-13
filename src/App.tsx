@@ -289,7 +289,7 @@ const CaseStudies = () => {
       insight: "Educational brands convert better when ads focus on transformation rather than features.",
       stat: "~$20K campaign spend",
       tags: ["Meta Lead Ads", "Copywriting", "CRO"],
-      img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"
+      img: mm
     },
     {
       title: "Wafflicious",
