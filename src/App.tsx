@@ -663,12 +663,8 @@ const Footer = () => {
         <div className="flex gap-10 items-center">
           <span className="flex items-center gap-2">
             <span className="w-1 h-1 rounded-full bg-white/20"></span>
-            Built with discipline • Bengaluru
+            Built with discipline • Hyderabad
           </span>
-          <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/5 shadow-sm">
-            <div className="w-5 h-5 rounded-lg bg-purple-600 flex items-center justify-center text-[8px] font-bold text-white">M</div>
-            <span className="text-white/60">Made with Emergent</span>
-          </div>
         </div>
       </div>
     </footer>
