@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, Mail, MapPin, Star, CheckCircle2, ChevronRight, Menu, X } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "./images/logo.png";
 import heroImg from "./images/hero.png";
 import domeRect from "./images/dome_rect.png";
@@ -13,9 +13,49 @@ import mm from "./images/mm.jpeg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+  const [hidden, setHidden] = useState(false);
+  const lastScroll = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const current = window.scrollY || document.documentElement.scrollTop;
+      const delta = current - lastScroll.current;
+      // Ignore tiny scrolls
+      if (Math.abs(delta) < 10) return;
+      if (current > lastScroll.current && current > 80) {
+        // scrolling down
+        setHidden(true);
+      } else {
+        // scrolling up
+        setHidden(false);
+      }
+      lastScroll.current = current;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Reveal header when the mouse/touch is near the top of the viewport
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      const y = e.clientY;
+      if (y <= 48) setHidden(false);
+    };
+    const onTouchStart = (e: TouchEvent) => {
+      const y = e.touches && e.touches[0] ? e.touches[0].clientY : 0;
+      if (y <= 48) setHidden(false);
+    };
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("touchstart", onTouchStart);
+    };
+  }, []);
+
   return (
-  <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center bg-black/50 backdrop-blur-xl border-b border-white/5 pt-3 pl-13 pr-13 pb-1">
+  <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center bg-black/50 backdrop-blur-xl border-b border-white/5 pt-3 pl-13 pr-13 pb-1 transform ${hidden ? '-translate-y-full' : 'translate-y-0'} transition-transform duration-300` }>
       {/* Left: logo + brand */}
       <div className="flex items-center gap-3">
   <img src={logo} alt="Glorix logo" className="w-8 h-8 sm:w-12 sm:h-12 md:w-22 md:h-22 rounded-none object-contain shadow-sm" />
