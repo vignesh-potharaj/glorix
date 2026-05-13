@@ -155,11 +155,11 @@ const Hero = () => {
 
 const BrandMarquee = () => {
   const brands = [
-    { name: "DOME CAFE", src: "https://picsum.photos/seed/dome/200/100" },
-  { name: "WAFFLICIOUS", src: wafLogo },
+    { name: "DOME CAFE", src: domeRect },
+    { name: "WAFFLICIOUS", src: wafLogo },
     { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha/200/100" },
-    { name: "DOME CAFE", src: "https://picsum.photos/seed/dome2/200/100" },
-  { name: "WAFFLICIOUS", src: wafLogo },
+    { name: "DOME CAFE", src: domeRect },
+    { name: "WAFFLICIOUS", src: wafLogo },
     { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha2/200/100" },
   ];
   
@@ -173,8 +173,8 @@ const BrandMarquee = () => {
           className="flex gap-16 md:gap-32 items-center"
          >
            {brands.concat(brands).map((brand, i) => (
-             <div key={i} className="flex items-center gap-6 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-               <img src={brand.src} alt={brand.name} className="h-10 md:h-12 lg:h-16 w-auto object-contain invert" referrerPolicy="no-referrer" />
+             <div key={i} className="flex items-center gap-6 transition-none">
+               <img src={brand.src} alt={brand.name} className="h-10 md:h-12 lg:h-16 w-auto object-contain" referrerPolicy="no-referrer" />
                <span className="font-bold text-2xl md:text-3xl tracking-tighter text-white">{brand.name}</span>
              </div>
            ))}
