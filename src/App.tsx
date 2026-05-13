@@ -7,6 +7,7 @@ import domeRect from "./images/dome_rect.png";
 import wafLogo from "./images/waf_logo.png";
 import waffleImg from "./images/waffle.png";
 import greySuit from "./images/grey_suit.jpeg";
+import mm from "./images/mm.jpeg";
 
 // --- Components ---
 
@@ -156,11 +157,11 @@ const Hero = () => {
 const BrandMarquee = () => {
   const brands = [
     { name: "DOME CAFE", src: domeRect },
-    { name: "WAFFLICIOUS", src: wafLogo },
-    { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha/200/100" },
+    { name: "WAFFLICIOUS", src: waffleImg },
+  { name: "MEDHA MASTERMIND", src: mm },
     { name: "DOME CAFE", src: domeRect },
-    { name: "WAFFLICIOUS", src: wafLogo },
-    { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha2/200/100" },
+    { name: "WAFFLICIOUS", src: waffleImg },
+  { name: "MEDHA MASTERMIND", src: mm },
   ];
   
   return (
@@ -431,9 +432,9 @@ const About = () => {
 const Testimonials = () => {
   const reviews = [
     {
-      name: "Aanya Sharma",
-      role: "Founder, Luma Activewear",
-      text: "Karthik rebuilt our entire ads setup in 2 weeks. We went from struggling to break even at $3L/day to consistently doing 6x ROAS. He genuinely understands D2C economics.",
+      name: "Akshay Reddy",
+      role: "Founder",
+      text: "Honestly didn’t expect much in the beginning because every marketer says the same stuff. But Loki actually understands attention and positioning really well. He helped us improve our Instagram content direction and landing flow, and our leads quality improved within weeks. Communication was quick, no corporate nonsense, just practical ideas that worked.",
       img: "https://i.pravatar.cc/150?u=aanya"
     },
     {
@@ -443,15 +444,15 @@ const Testimonials = () => {
       img: "https://i.pravatar.cc/150?u=rohan"
     },
     {
-      name: "Priya Menon",
-      role: "Head of Growth, Northwind",
-      text: "We tried three agencies before Karthik. He's the only one who actually moved the CAC needle. Now he runs our entire paid stack and we've never looked back.",
+      name: "Arjun Varma",
+      role: "Founder",
+      text: "Loki understands internet attention way better than most marketers I’ve worked with. Good creative sense, fast execution, and no unnecessary meetings.",
       img: "https://i.pravatar.cc/150?u=priya"
     },
     {
-      name: "Vikram Desai",
-      role: "Founder, Lumen Home",
-      text: "Treats our money like his own. That's rare. We've scaled spend 4x in a year and stayed profit-positive every single month.",
+      name: "Karthik Reddy",
+      role: "D2C Brand Owner",
+      text: "Came in mainly for ads, ended up helping us improve positioning and content too. That made the biggest difference honestly.",
       img: "https://i.pravatar.cc/150?u=vikram"
     }
   ];
