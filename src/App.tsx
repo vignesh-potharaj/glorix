@@ -275,7 +275,7 @@ const CaseStudies = () => {
       metric: "150+ bookings",
       desc: "Dome Café needed a consistent booking flow for high-ticket experiences and events, but existing campaigns lacked clear funnel structure and conversion tracking. Built a Meta Ads system with emotion-driven creatives, WhatsApp as the primary conversion channel, and CTA-based attribution.",
       insight: "For hospitality brands, creative positioning often matters more than targeting complexity.",
-      stat: "~₹4.9K spend • ~₹6.5K AOV",
+      stat: "~$4.9K spend • ~$6.5K AOV",
       tags: ["Meta Ads", "WhatsApp Funnel", "Tracking"],
       img: domeRect
     },
@@ -286,7 +286,7 @@ const CaseStudies = () => {
       metric: "Lower CPL",
       desc: "Needed a cleaner lead acquisition system for educational offers and less dependency on inconsistent organic reach. Built Meta lead campaigns with sharper hooks, pain-point driven copy, a simplified funnel journey, and a reusable creative testing framework.",
       insight: "Educational brands convert better when ads focus on transformation rather than features.",
-      stat: "~₹20K campaign spend",
+      stat: "~$20K campaign spend",
       tags: ["Meta Lead Ads", "Copywriting", "CRO"],
       img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"
     },
@@ -433,7 +433,7 @@ const Testimonials = () => {
     {
       name: "Aanya Sharma",
       role: "Founder, Luma Activewear",
-      text: "Karthik rebuilt our entire ads setup in 2 weeks. We went from struggling to break even at ₹3L/day to consistently doing 6x ROAS. He genuinely understands D2C economics.",
+      text: "Karthik rebuilt our entire ads setup in 2 weeks. We went from struggling to break even at $3L/day to consistently doing 6x ROAS. He genuinely understands D2C economics.",
       img: "https://i.pravatar.cc/150?u=aanya"
     },
     {
@@ -594,9 +594,9 @@ const Contact = () => {
                 <label className="text-[10px] uppercase tracking-widest opacity-40 ml-1">Monthly AD Budget</label>
                 <select name="budget" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition-colors appearance-none">
                   <option className="bg-black">Select range</option>
-                  <option className="bg-black">₹50K - ₹2L</option>
-                  <option className="bg-black">₹2L - ₹5L</option>
-                  <option className="bg-black">₹5L+</option>
+                  <option className="bg-black">$50K - $2L</option>
+                  <option className="bg-black">$2L - $5L</option>
+                  <option className="bg-black">$5L+</option>
                 </select>
               </div>
             </div>
