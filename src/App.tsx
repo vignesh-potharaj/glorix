@@ -437,9 +437,9 @@ const Testimonials = () => {
       img: "https://i.pravatar.cc/150?u=aanya"
     },
     {
-      name: "Rohan Iyer",
-      role: "Co-founder, Brewhaus Coffee",
-      text: "The reporting alone is worth it. Every Monday we get a clear picture of where revenue is coming from. No fluff, no vanity metrics. Just decisions to make.",
+      name: "Sravani",
+      role: "Founder, Waffilicious",
+      text: "Karthikeyan brings a great mix of enthusiasm and strategy. His ideas have been fresh, innovative, thoughtful, and strongly aligned with the audience we want to connect and build the brand with.",
       img: "https://i.pravatar.cc/150?u=rohan"
     },
     {
