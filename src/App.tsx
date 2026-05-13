@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
-import { ArrowUpRight, Instagram, Linkedin, Mail, MapPin, Star, CheckCircle2, ChevronRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Star, CheckCircle2, ChevronRight, Menu, X } from "lucide-react";
 import React, { useState } from "react";
+import logo from "./images/logo.png";
+import heroImg from "./images/hero.png";
+import domeRect from "./images/dome_rect.png";
+import wafLogo from "./images/waf_logo.png";
+import waffleImg from "./images/waffle.png";
+import greySuit from "./images/grey_suit.jpeg";
 
 // --- Components ---
 
@@ -8,28 +14,36 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-black/50 backdrop-blur-xl border-b border-white/5">
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg bg-linear-to-br from-purple-600 to-blue-800 flex items-center justify-center font-bold text-xs italic text-white leading-none">K</div>
-        <span className="font-bold text-xl font-sans text-white">karth.</span>
-      </div>
-      
-      <div className="hidden md:flex items-center gap-8 text-sm font-medium opacity-60">
-        <a href="#home" className="hover:opacity-100 transition-opacity">Home</a>
-        <a href="#case-studies" className="hover:opacity-100 transition-opacity">Case Study</a>
-        <a href="#services" className="hover:opacity-100 transition-opacity">Services</a>
-        <a href="#about" className="hover:opacity-100 transition-opacity">About</a>
-        <a href="#reviews" className="hover:opacity-100 transition-opacity">Reviews</a>
-        <a href="#contact" className="hover:opacity-100 transition-opacity">Contact</a>
+  <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center bg-black/50 backdrop-blur-xl border-b border-white/5 pt-3 pl-13 pr-13 pb-1">
+      {/* Left: logo + brand */}
+      <div className="flex items-center gap-3">
+  <img src={logo} alt="Glorix logo" className="w-8 h-8 sm:w-12 sm:h-12 md:w-22 md:h-22 rounded-none object-contain shadow-sm" />
       </div>
 
-      <a href="#contact" className="hidden md:block px-6 py-2 rounded-full bg-linear-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-sm font-medium hover:from-purple-600/40 transition-all">
-        Get in Touch
-      </a>
+      {/* Center: nav links (centered) */}
+      <div className="hidden md:flex flex-1 justify-center items-center">
+        <div className="flex items-center gap-10 text-base md:text-lg font-semibold opacity-90">
+          <a href="#home" className="hover:opacity-100 transition-opacity">Home</a>
+          <a href="#case-studies" className="hover:opacity-100 transition-opacity">Case Study</a>
+          <a href="#services" className="hover:opacity-100 transition-opacity">Services</a>
+          <a href="#about" className="hover:opacity-100 transition-opacity">About</a>
+          <a href="#reviews" className="hover:opacity-100 transition-opacity">Reviews</a>
+          <a href="#contact" className="hover:opacity-100 transition-opacity">Contact</a>
+        </div>
+      </div>
 
-      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X /> : <Menu />}
-      </button>
+      {/* Right: socials + CTA + mobile menu */}
+      <div className="flex items-center gap-6">
+        {/* socials removed */}
+
+        <a href="#contact" className="hidden md:inline-block px-6 py-3 rounded-full bg-linear-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-base font-semibold hover:from-purple-600/40 transition-all">
+          Get in Touch
+        </a>
+
+        <button className="md:hidden p-3 rounded-lg bg-white/5" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          {isOpen ? <X /> : <Menu />}
+        </button>
+      </div>
 
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-black border-b border-white/10 p-6 flex flex-col gap-4 md:hidden">
@@ -96,9 +110,9 @@ const Hero = () => {
           viewport={{ once: true }}
           className="relative rounded-3xl overflow-hidden aspect-square"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000" 
-            alt="Karthikeyan Portrait" 
+          <img
+            src={heroImg}
+            alt="Karthikeyan Portrait"
             className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700"
             referrerPolicy="no-referrer"
           />
@@ -110,17 +124,17 @@ const Hero = () => {
             </div>
             <div>
               <div className="text-[10px] opacity-60">Dome Café</div>
-              <div className="text-sm font-bold">150+ <span className="text-blue-400 font-normal">Bookings</span></div>
+              <div className="text-sm font-bold">150+ <span className="text-blue-700 font-normal">Bookings</span></div>
             </div>
           </div>
           
           <div className="absolute top-20 right-6 bg-glass p-3 rounded-2xl flex items-center gap-3 animation-delay-1000 animate-bounce">
             <div>
               <div className="text-[10px] opacity-60 text-right">Avg. Order Value</div>
-              <div className="text-sm font-bold italic">₹6.5K <span className="text-green-400 font-normal">Per booking</span></div>
+              <div className="text-sm font-bold italic">7<span className="text-blue-700 font-normal"> Figure Revenue</span></div>
             </div>
             <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-              <ArrowUpRight className="text-green-400 w-5 h-5" />
+              <ArrowUpRight className="text-green-700 w-5 h-5" />
             </div>
           </div>
 
@@ -142,26 +156,26 @@ const Hero = () => {
 const BrandMarquee = () => {
   const brands = [
     { name: "DOME CAFE", src: "https://picsum.photos/seed/dome/200/100" },
-    { name: "WAFFLICIOUS", src: "https://picsum.photos/seed/waff/200/100" },
+  { name: "WAFFLICIOUS", src: wafLogo },
     { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha/200/100" },
     { name: "DOME CAFE", src: "https://picsum.photos/seed/dome2/200/100" },
-    { name: "WAFFLICIOUS", src: "https://picsum.photos/seed/waff2/200/100" },
+  { name: "WAFFLICIOUS", src: wafLogo },
     { name: "MEDHA MASTERMIND", src: "https://picsum.photos/seed/medha2/200/100" },
   ];
   
   return (
-    <div className="py-20 border-y border-white/5 overflow-hidden">
-      <div className="max-w-max mx-auto text-center mb-10 text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">Brands I've helped grow</div>
-      <div className="flex gap-12 whitespace-nowrap marquee-container">
+    <div className="py-10 border-y border-white/5 overflow-hidden">
+      <div className="max-w-max mx-auto text-center mb-12 text-sm uppercase tracking-[0.35em] text-white/40 font-bold">Brands I've helped grow</div>
+      <div className="flex gap-16 whitespace-nowrap marquee-container">
          <motion.div 
-          animate={{ x: [0, -1000] }}
-          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-          className="flex gap-12 md:gap-24 items-center"
+          animate={{ x: [0, -1600] }}
+          transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+          className="flex gap-16 md:gap-32 items-center"
          >
            {brands.concat(brands).map((brand, i) => (
-             <div key={i} className="flex items-center gap-3 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-               <img src={brand.src} alt={brand.name} className="h-6 md:h-8 w-auto object-contain invert" referrerPolicy="no-referrer" />
-               <span className="font-bold text-xl tracking-tighter text-white">{brand.name}</span>
+             <div key={i} className="flex items-center gap-6 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+               <img src={brand.src} alt={brand.name} className="h-10 md:h-12 lg:h-16 w-auto object-contain invert" referrerPolicy="no-referrer" />
+               <span className="font-bold text-2xl md:text-3xl tracking-tighter text-white">{brand.name}</span>
              </div>
            ))}
          </motion.div>
@@ -263,7 +277,7 @@ const CaseStudies = () => {
       insight: "For hospitality brands, creative positioning often matters more than targeting complexity.",
       stat: "~₹4.9K spend • ~₹6.5K AOV",
       tags: ["Meta Ads", "WhatsApp Funnel", "Tracking"],
-      img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800"
+      img: domeRect
     },
     {
       title: "Medha Mastermind",
@@ -285,7 +299,7 @@ const CaseStudies = () => {
       insight: "Food content fails when it looks aesthetic but lacks sensory triggers and pacing.",
       stat: "Stronger brand recall",
       tags: ["Content Strategy", "Short-form", "Brand"],
-      img: "https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?auto=format&fit=crop&q=80&w=800"
+      img: waffleImg
     }
   ];
 
@@ -362,9 +376,9 @@ const About = () => {
             viewport={{ once: true }}
             className="rounded-[3rem] overflow-hidden aspect-[4/5] relative group border border-white/5"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000" 
-              alt="About Karth" 
+            <img
+              src={greySuit}
+              alt="About Karth"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
@@ -528,7 +542,7 @@ const Contact = () => {
           
           <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 group hover:bg-white/[0.07] transition-all">
             <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
-              <Instagram className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
             </div>
             <div>
               <div className="text-[10px] uppercase opacity-40">Direct DM</div>
@@ -617,8 +631,7 @@ const Footer = () => {
       <div className="grid md:grid-cols-4 gap-16 relative z-10">
         <div className="md:col-span-2 space-y-8">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-purple-600 to-blue-800 flex items-center justify-center font-bold text-lg italic text-white shadow-lg shadow-purple-500/20">K</div>
-            <span className="font-extrabold text-2xl font-sans tracking-tighter text-white">karth.ai</span>
+            <img src={logo} alt="Glorix logo" className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-none object-contain shadow-lg shadow-purple-500/20" />
           </div>
           <p className="text-white/40 text-base leading-relaxed max-w-xs font-light">Building Glorix: Performance marketing & content strategy for ambitious brands. Technical precision meets creative excellence.</p>
           <div className="text-sm font-bold text-white bg-white/5 px-4 py-2 rounded-lg inline-block">karthikeyan.consult@gmail.com</div>
@@ -637,12 +650,7 @@ const Footer = () => {
         <div>
           <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20 mb-8">Follow</h4>
           <div className="flex gap-4">
-            <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group">
-              <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </a>
-            <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group">
-              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </a>
+            {/* Instagram & LinkedIn removed */}
             <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group">
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
