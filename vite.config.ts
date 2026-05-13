@@ -5,11 +5,13 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  const defineEnv: Record<string, string> = {};
+  if (env.GEMINI_API_KEY) {
+    defineEnv['process.env.GEMINI_API_KEY'] = JSON.stringify(env.GEMINI_API_KEY);
+  }
   return {
     plugins: [react(), tailwindcss()],
-    define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-    },
+    define: defineEnv,
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
