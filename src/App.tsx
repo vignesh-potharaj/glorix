@@ -9,6 +9,8 @@ import waffleImg from "./images/waffle.png";
 import greySuit from "./images/grey_suit.jpeg";
 import mm from "./images/mm.jpeg";
 import anonymous from "./images/WhatsApp Image 2026-05-17 at 21.48.32.jpeg";
+import arjun from "./images/naim-ahmed-8BcVHmAHtlw-unsplash.jpg";
+import reddy from "./images/sanju-pandita-EIrp4pTz3cU-unsplash.jpg";
 
 // --- Components ---
 
@@ -393,12 +395,6 @@ const CaseStudies = () => {
                 <p className="text-xs font-medium text-white/80 italic">"{c.insight}"</p>
               </div>
 
-              <div className="flex justify-between items-center mt-auto border-t border-white/5 pt-6">
-                <div className="text-xs font-bold text-white">{c.stat}</div>
-                <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all cursor-pointer">
-                  <ArrowUpRight className="w-5 h-5" />
-                </div>
-              </div>
             </div>
           </motion.div>
         ))}
@@ -488,13 +484,13 @@ const Testimonials = () => {
       name: "Arjun Varma",
       role: "Founder",
       text: "Karthikeyan understands internet attention way better than most marketers I’ve worked with. Good creative sense, fast execution, and no unnecessary meetings.",
-      img: "https://i.pravatar.cc/150?u=priya"
+      img: arjun
     },
     {
       name: "Karthik Reddy",
       role: "D2C Brand Owner",
       text: "Came in mainly for ads, ended up helping us improve positioning and content too. That made the biggest difference honestly.",
-      img: "https://i.pravatar.cc/150?u=vikram"
+      img: reddy
     }
   ];
 
