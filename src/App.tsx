@@ -8,6 +8,7 @@ import wafLogo from "./images/waf_logo.png";
 import waffleImg from "./images/waffle.png";
 import greySuit from "./images/grey_suit.jpeg";
 import mm from "./images/mm.jpeg";
+import anonymous from "./images/WhatsApp Image 2026-05-17 at 21.48.32.jpeg";
 
 // --- Components ---
 
@@ -472,10 +473,10 @@ const About = () => {
 const Testimonials = () => {
   const reviews = [
     {
-      name: "Akshay Reddy",
-      role: "Founder",
+      name: "Vygnika",
+      role: "Founder, Dome-Cafe",
       text: "Honestly didn’t expect much in the beginning because every marketer says the same stuff. But Loki actually understands attention and positioning really well. He helped us improve our Instagram content direction and landing flow, and our leads quality improved within weeks. Communication was quick, no corporate nonsense, just practical ideas that worked.",
-      img: "https://i.pravatar.cc/150?u=aanya"
+  img: anonymous
     },
     {
       name: "Sravani",
@@ -486,7 +487,7 @@ const Testimonials = () => {
     {
       name: "Arjun Varma",
       role: "Founder",
-      text: "Loki understands internet attention way better than most marketers I’ve worked with. Good creative sense, fast execution, and no unnecessary meetings.",
+      text: "Karthikeyan understands internet attention way better than most marketers I’ve worked with. Good creative sense, fast execution, and no unnecessary meetings.",
       img: "https://i.pravatar.cc/150?u=priya"
     },
     {
@@ -635,9 +636,10 @@ const Contact = () => {
                 <label className="text-[10px] uppercase tracking-widest opacity-40 ml-1">Monthly AD Budget</label>
                 <select name="budget" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition-colors appearance-none">
                   <option className="bg-black">Select range</option>
-                  <option className="bg-black">$50K - $2L</option>
-                  <option className="bg-black">$2L - $5L</option>
-                  <option className="bg-black">$5L+</option>
+                  <option className="bg-black">$500 on wards</option>
+                  <option className="bg-black">$500 - $1000</option>
+                  <option className="bg-black">$1000 - $3000</option>
+                  <option className="bg-black">$3000+</option>
                 </select>
               </div>
             </div>
